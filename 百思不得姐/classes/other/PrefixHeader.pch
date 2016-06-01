@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  01-百思不得姐
+//
+//  Created by xiaomage on 15/7/22.
+//  Copyright (c) 2015年 小码哥. All rights reserved.
+//
+
+#ifndef _1_______PrefixHeader_pch
+#define _1_______PrefixHeader_pch
+#import "XMGConst.h"
+#import "UIView+XMGExtension.h"
+#import "UIBarButtonItem+LZGNewItem.h"
+#import "NSDate+LZGExtension.h"
+
+#ifdef DEBUG
+#define LZGLog(...) NSLog(__VA_ARGS__)
+#else
+#define LZGLog(...)
+#endif
+
+#define LZGLogFunc LZGLog(@"%s", __func__)
+#define LZGRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define LZGlogRGB LZGRGBColor(223, 223, 223)
+
+#define LZGScreenW [UIScreen mainScreen].bounds.size.width
+#define LZGScreenH [UIScreen mainScreen].bounds.size.height
+
+#endif

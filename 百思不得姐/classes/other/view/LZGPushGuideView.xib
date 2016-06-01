@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LZGPushGuideView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidetop" translatesAutoresizingMaskIntoConstraints="NO" id="FmY-1p-5bh">
+                    <rect key="frame" x="63" y="186" width="250" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="21E-NN-BO0"/>
+                        <constraint firstAttribute="height" constant="55" id="5jK-N4-w6g"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidemid" translatesAutoresizingMaskIntoConstraints="NO" id="ftR-ZY-iS5">
+                    <rect key="frame" x="68" y="271" width="240" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="2zI-8a-o40"/>
+                        <constraint firstAttribute="width" constant="240" id="DTn-uZ-laK"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidebot" translatesAutoresizingMaskIntoConstraints="NO" id="dLq-Dc-MIl">
+                    <rect key="frame" x="123" y="406" width="130" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="ek1-Ol-FIB"/>
+                        <constraint firstAttribute="height" constant="90" id="urb-iC-FeT"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHV-FZ-LvW">
+                    <rect key="frame" x="123" y="457" width="100" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="KPa-R2-zPy"/>
+                        <constraint firstAttribute="height" constant="39" id="foZ-3e-NXr"/>
+                    </constraints>
+                    <connections>
+                        <action selector="meNew:" destination="iN0-l3-epB" eventType="touchUpInside" id="8oV-kp-Ahc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.70000000000000007" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ftR-ZY-iS5" firstAttribute="top" secondItem="FmY-1p-5bh" secondAttribute="bottom" constant="30" id="1H1-ut-XN9"/>
+                <constraint firstItem="OHV-FZ-LvW" firstAttribute="leading" secondItem="dLq-Dc-MIl" secondAttribute="leading" id="Hef-IG-ZkM"/>
+                <constraint firstItem="dLq-Dc-MIl" firstAttribute="top" secondItem="ftR-ZY-iS5" secondAttribute="bottom" constant="10" id="Lmr-Dx-EGo"/>
+                <constraint firstItem="OHV-FZ-LvW" firstAttribute="bottom" secondItem="dLq-Dc-MIl" secondAttribute="bottom" id="MSt-2A-Shr"/>
+                <constraint firstItem="dLq-Dc-MIl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aJe-ov-DOC"/>
+                <constraint firstItem="FmY-1p-5bh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="f1F-N6-xKh"/>
+                <constraint firstItem="ftR-ZY-iS5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="h7x-Qa-xP9"/>
+                <constraint firstItem="ftR-ZY-iS5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hg8-8Z-l5d"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="94.5" y="312.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pushguidebot" width="130" height="90"/>
+        <image name="pushguidemid" width="240" height="125"/>
+        <image name="pushguidetop" width="250" height="55"/>
+    </resources>
+</document>

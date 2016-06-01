@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LZGCommitViewController">
+            <connections>
+                <outlet property="tableViewLeft" destination="rCd-UL-7fB" id="jb2-Lb-nod"/>
+                <outlet property="tableViewRight" destination="Ks5-Zb-ovQ" id="SgK-Mq-vcX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rCd-UL-7fB">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="667"/>
+                    <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="nyP-81-O1X"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="94c-8g-tc2"/>
+                        <outlet property="delegate" destination="-1" id="TOM-Me-94L"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ks5-Zb-ovQ">
+                    <rect key="frame" x="70" y="0.0" width="305" height="667"/>
+                    <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eKF-Es-V3V"/>
+                        <outlet property="delegate" destination="-1" id="Rb2-C0-Awt"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ks5-Zb-ovQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EOW-oS-md9"/>
+                <constraint firstItem="Ks5-Zb-ovQ" firstAttribute="leading" secondItem="rCd-UL-7fB" secondAttribute="trailing" id="Ho8-qP-5od"/>
+                <constraint firstItem="rCd-UL-7fB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XO9-cV-VLg"/>
+                <constraint firstAttribute="trailing" secondItem="Ks5-Zb-ovQ" secondAttribute="trailing" id="dGU-R2-Tag"/>
+                <constraint firstAttribute="bottom" secondItem="rCd-UL-7fB" secondAttribute="bottom" id="g8V-6q-KIW"/>
+                <constraint firstAttribute="bottom" secondItem="Ks5-Zb-ovQ" secondAttribute="bottom" id="hhw-9f-FWs"/>
+                <constraint firstItem="rCd-UL-7fB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vTR-TT-4cK"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="140.5" y="195.5"/>
+        </view>
+    </objects>
+</document>
