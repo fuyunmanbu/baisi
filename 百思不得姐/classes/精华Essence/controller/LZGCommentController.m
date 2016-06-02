@@ -131,12 +131,28 @@
     }
     return 0;
 }
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//    NSInteger hot = self.hotComment.count;
+//    if (section == 0) {
+//        return hot > 0 ? @"最热评论" : @"最新评论";
+//    }
+//    return @"最新评论";
+//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc]init];
+    view.backgroundColor = LZGlogRGB;
+    UILabel *label = [[UILabel alloc]init];
+    label.width = 200;
+    label.x = XMGTopicCellMargin;
+    label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     NSInteger hot = self.hotComment.count;
-    if (section == 0) {
-        return hot > 0 ? @"最热评论" : @"最新评论";
-    }
-    return @"最新评论";
+        if (section == 0) {
+            label.text = hot > 0 ? @"最热评论" : @"最新评论";
+        }else {
+            label.text = @"最新评论";
+        }
+    [view addSubview:label];
+    return view;
 }
 /**
  * 返回第section组的所有评论数组

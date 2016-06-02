@@ -35,6 +35,7 @@ static NSString * const ID = @"tag";
     [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
         self.tags = [LZGRecommendTag mj_objectArrayWithKeyValuesArray:responseObject];
+        [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"请求参数错误！"];
     }];
