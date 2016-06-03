@@ -7,7 +7,7 @@
 //  帖子
 
 #import <UIKit/UIKit.h>
-
+@class XMGComment;
 @interface XMGTopic : NSObject
 /**
  *  id
@@ -74,7 +74,7 @@
 
 /** 视频控件的frame */
 @property (nonatomic, assign, readonly) CGRect videoF;
-/** 最热评论(期望这个数组中存放的是XMGComment模型) */
-@property (nonatomic, strong) NSArray *top_cmt;
+/** 最热评论 */
+@property (nonatomic, strong) XMGComment *top_cmt;
 
 @end

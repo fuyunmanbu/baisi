@@ -113,10 +113,10 @@
         self.pictureView.hidden = YES;
     }
     // 处理最热评论
-    XMGComment *cmt = [topic.top_cmt firstObject];
-    if (cmt) {
+
+    if (topic.top_cmt) {
         self.topView.hidden = NO;
-        self.topCmtContentLable.text = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
+        self.topCmtContentLable.text = [NSString stringWithFormat:@"%@ : %@",topic.top_cmt.user.username,topic.top_cmt.content];
     }else{
         self.topView.hidden = YES;
     }

@@ -11,6 +11,8 @@
 @class XMGUser;
 
 @interface XMGComment : NSObject
+/** 音频文件的路径 */
+@property (nonatomic, copy) NSString *voiceuri;
 /** 音频文件的时长 */
 @property (nonatomic, assign) NSInteger voicetime;
 /** 评论的文字内容 */
@@ -19,4 +21,8 @@
 @property (nonatomic, assign) NSInteger like_count;
 /** 用户 */
 @property (nonatomic, strong) XMGUser *user;
+/**
+ *  id
+ */
+@property(nonatomic,copy)NSString *ID;
 @end

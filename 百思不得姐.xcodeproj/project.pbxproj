@@ -61,6 +61,8 @@
 		CEB4E3B41CFAE7B300B70ABD /* LZGVedioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB4E3B31CFAE7B300B70ABD /* LZGVedioView.xib */; };
 		CEB4E3B91CFB2D2500B70ABD /* XMGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB4E3B61CFB2D2500B70ABD /* XMGUser.m */; };
 		CEB4E3BA1CFB2D2500B70ABD /* XMGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB4E3B81CFB2D2500B70ABD /* XMGComment.m */; };
+		CEEA31F31D00680600C84AD2 /* LZGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA31F11D00680600C84AD2 /* LZGCommentCell.m */; };
+		CEEA31F41D00680600C84AD2 /* LZGCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA31F21D00680600C84AD2 /* LZGCommentCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +160,9 @@
 		CEB4E3B61CFB2D2500B70ABD /* XMGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGUser.m; sourceTree = "<group>"; };
 		CEB4E3B71CFB2D2500B70ABD /* XMGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGComment.h; sourceTree = "<group>"; };
 		CEB4E3B81CFB2D2500B70ABD /* XMGComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGComment.m; sourceTree = "<group>"; };
+		CEEA31F01D00680600C84AD2 /* LZGCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZGCommentCell.h; sourceTree = "<group>"; };
+		CEEA31F11D00680600C84AD2 /* LZGCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZGCommentCell.m; sourceTree = "<group>"; };
+		CEEA31F21D00680600C84AD2 /* LZGCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZGCommentCell.xib; sourceTree = "<group>"; };
 		E967D19FACF864BEE4B386E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -470,6 +475,9 @@
 				CE5029091CF9A2EB008C1CD1 /* LZGTopicCell.h */,
 				CE50290A1CF9A2EB008C1CD1 /* LZGTopicCell.m */,
 				CE50290B1CF9A2EB008C1CD1 /* LZGTopicCell.xib */,
+				CEEA31F01D00680600C84AD2 /* LZGCommentCell.h */,
+				CEEA31F11D00680600C84AD2 /* LZGCommentCell.m */,
+				CEEA31F21D00680600C84AD2 /* LZGCommentCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -546,6 +554,7 @@
 				CEABFFEF1CFBF7EA0043BB64 /* LZGCommentController.xib in Resources */,
 				CE5029151CF9A2EB008C1CD1 /* LZGPublishView.xib in Resources */,
 				CE50292A1CF9A2EB008C1CD1 /* XMGRecommendCategoryCell.xib in Resources */,
+				CEEA31F41D00680600C84AD2 /* LZGCommentCell.xib in Resources */,
 				CE5029201CF9A2EB008C1CD1 /* LZGFriendTrendsViewController.xib in Resources */,
 				CE5029241CF9A2EB008C1CD1 /* LZGloginRegisterController.xib in Resources */,
 				CE5029381CF9A2EB008C1CD1 /* LZGTopicCell.xib in Resources */,
@@ -632,6 +641,7 @@
 				CE5029281CF9A2EB008C1CD1 /* LZGVerticaButton.m in Sources */,
 				CE5029141CF9A2EB008C1CD1 /* LZGPublishView.m in Sources */,
 				CE5029321CF9A2EB008C1CD1 /* LZGRecommendTag.m in Sources */,
+				CEEA31F31D00680600C84AD2 /* LZGCommentCell.m in Sources */,
 				CE5029131CF9A2EB008C1CD1 /* LZGNavigationController.m in Sources */,
 				CE5029291CF9A2EB008C1CD1 /* XMGRecommendCategoryCell.m in Sources */,
 				CE5029161CF9A2EB008C1CD1 /* LZGTabBarController.m in Sources */,

@@ -13,16 +13,17 @@
 @implementation XMGTopic{
     CGRect _pictureView;
 }
-+ (NSDictionary *)mj_objectClassInArray{
-    return @{@"top_cmt" : @"XMGComment"};
-}
+//+ (NSDictionary *)mj_objectClassInArray{
+//    return @{@"top_cmt" : @"XMGComment"};
+//}
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
     return @{
              @"small_image" : @"image0",
              @"large_image" : @"image1",
              @"middle_image" : @"image2",
-             @"ID" : @"id"
+             @"ID" : @"id",
+             @"top_cmt" : @"top_cmt[0]"
              };
 }
 
@@ -110,13 +111,11 @@
                 _cellHeight += videoH;
             }
             // 如果有最热评论
-            XMGComment *cmt = [self.top_cmt firstObject];
-            if (cmt) {
-                NSString *content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+            if (self.top_cmt) {
+                NSString *content = [NSString stringWithFormat:@"%@ : %@", self.top_cmt.user.username, self.top_cmt.content];
                 CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
                 _cellHeight += XMGTopicCellTopCmtTitleH + contentH + XMGTopicCellMargin;
             }
-            
             _cellHeight += 2 * XMGTopicCellMargin;
         }
         return _cellHeight;
