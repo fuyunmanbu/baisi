@@ -17,8 +17,10 @@
     UINavigationBar *bar = [UINavigationBar appearance];
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 }
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if (self.childViewControllers.count > 0) { // 如果push进来的不是第一个控制器

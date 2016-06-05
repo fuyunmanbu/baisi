@@ -7,7 +7,7 @@
 //
 
 #import "LZGloginRegisterController.h"
-
+#import "XMGTopWindow.h"
 @interface LZGloginRegisterController ()
 /**
  *  登入框距离控制器view左边的间距
@@ -31,15 +31,16 @@
     }];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-   
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [XMGTopWindow hide];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
 - (IBAction)dismis:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [XMGTopWindow show];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{

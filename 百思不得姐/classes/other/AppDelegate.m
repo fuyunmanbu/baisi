@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LZGTabBarController.h"
 #import "LZGPushGuideView.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,8 +21,8 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[LZGTabBarController alloc]init];
     [self.window makeKeyAndVisible];
-    [LZGPushGuideView show];
-    
+//    // 添加一个window, 点击这个window, 可以让屏幕上的scrollView滚到最顶部
+//    [XMGTopWindow show];
     return YES;
 }
 
@@ -40,7 +41,7 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

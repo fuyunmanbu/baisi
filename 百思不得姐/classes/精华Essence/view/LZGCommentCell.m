@@ -29,7 +29,8 @@
 
 - (void)setComment:(XMGComment *)comment{
     _comment = comment;
-    [self.headImage sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.headImage sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+     [self.headImage setHeaderImage:comment.user.profile_image];
     self.sexImage.image = [comment.user.sex isEqualToString:XMGUserSexMale]?[UIImage imageNamed:@"Profile_manIcon"]:[UIImage imageNamed:@"Profile_womanIcon"];
     self.contentLable.text = comment.content;
     self.likeCountLable.text = [NSString stringWithFormat:@"%zd",comment.like_count];
@@ -48,4 +49,11 @@
     
     [super setFrame:frame];
 }
+- (BOOL)canBecomeFirstResponder{
+    return YES;
+}
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender{
+    return NO;
+}
+    
 @end

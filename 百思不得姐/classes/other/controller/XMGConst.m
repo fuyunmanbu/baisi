@@ -25,3 +25,10 @@ NSString * const XMGUserSexFemale = @"f";
 
 /** 精华-cell-最热评论标题的高度 */
 CGFloat const XMGTopicCellTopCmtTitleH = 20;
+
+/** tabBar被选中的通知名字 */
+NSString * const XMGTabBarDidSelectNotification = @"XMGTabBarDidSelectNotification";
+/** tabBar被选中的通知 - 被选中的控制器的index key */
+NSString * const XMGSelectedControllerIndexKey = @"XMGSelectedControllerIndexKey";
+/** tabBar被选中的通知 - 被选中的控制器 key */
+NSString * const XMGSelectedControllerKey = @"XMGSelectedControllerKey";

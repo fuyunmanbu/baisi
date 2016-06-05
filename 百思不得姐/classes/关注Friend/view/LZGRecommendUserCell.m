@@ -31,7 +31,8 @@
         subNumber = [NSString stringWithFormat:@"%.1f万人关注",user.fans_count / 10000.0];
     }
     self.nameText.text =  subNumber;
-    [self.headImage sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.headImage sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headImage setHeaderImage:user.header];
 }
 
 @end

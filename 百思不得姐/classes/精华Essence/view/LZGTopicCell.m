@@ -72,7 +72,8 @@
 }
 - (void)setTopic:(XMGTopic *)topic{
     _topic = topic;
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.profileImageView setHeaderImage:topic.profile_image];
     self.nameLabel.text = topic.name;
     self.createTimeLabel.text = topic.create_time;
     // 设置按钮文字

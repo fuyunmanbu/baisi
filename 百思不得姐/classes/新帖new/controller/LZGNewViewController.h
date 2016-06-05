@@ -6,8 +6,8 @@
 //  Copyright © 2016年 iphone. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LZGEssenceViewController.h"
 
-@interface LZGNewViewController : UIViewController
+@interface LZGNewViewController : LZGEssenceViewController
 
 @end

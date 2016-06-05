@@ -14,6 +14,8 @@
 #import <MJRefresh.h>
 #import "LZGCommentController.h"
 #import "LZGTopicCell.h"
+#import "XMGTopWindow.h"
+#import "LZGNewViewController.h"
 static NSString *const ID = @"topic";
 @interface LZGAllViewController ()//<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSMutableArray *topis;
@@ -29,6 +31,8 @@ static NSString *const ID = @"topic";
  *  上一次的请求参数
  */
 @property(nonatomic,strong)NSDictionary *params;
+/** 上次选中的索引(或者控制器) */
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
 @end
 
 @implementation LZGAllViewController
@@ -41,6 +45,9 @@ static NSString *const ID = @"topic";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //    // 添加一个window, 点击这个window, 可以让屏幕上的scrollView滚到最顶部
+    [XMGTopWindow show];
+    
     CGFloat button = CGRectGetMaxY(self.navigationController.navigationBar.frame) + 35;
     CGFloat top = self.tabBarController.tabBar.height;
     self.tableView.contentInset = UIEdgeInsetsMake(button, 0, top, 0);
@@ -49,7 +56,23 @@ static NSString *const ID = @"topic";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LZGTopicCell class]) bundle:nil] forCellReuseIdentifier:ID];
     [self setPerfresh];
     [self loadParame];
+    
+    // 监听tabbar点击的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelect) name:XMGTabBarDidSelectNotification object:nil];
 }
+- (void)tabBarSelect
+{
+    // 如果是连续选中2次, 直接刷新
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex
+        //        && self.tabBarController.selectedViewController == self.navigationController
+        && self.view.isShowingOnKeyWindow) {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    // 记录这一次选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
+}
+
 - (void)setPerfresh{
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadParame)];
     /**
@@ -61,6 +84,9 @@ static NSString *const ID = @"topic";
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreParame)];
     
 }
+- (NSString *)a{
+    return [self.parentViewController isKindOfClass:[LZGNewViewController class]] ? @"newlist" : @"list";
+}
 /**
  *  上拉
  */
@@ -68,7 +94,7 @@ static NSString *const ID = @"topic";
     [self.tableView.mj_header endRefreshing];
     self.page ++;
     NSMutableDictionary *parame = [NSMutableDictionary dictionary];
-    parame[@"a"] = @"list";
+    parame[@"a"] = self.a;
     parame[@"c"] = @"data";
     parame[@"type"] = @(self.type);
     parame[@"page"] = @(self.page);
@@ -96,7 +122,7 @@ static NSString *const ID = @"topic";
 - (void)loadParame{
     [self.tableView.mj_footer endRefreshing];
     NSMutableDictionary *parame = [NSMutableDictionary dictionary];
-    parame[@"a"] = @"list";
+    parame[@"a"] = self.a;
     parame[@"c"] = @"data";
     parame[@"type"] = @(self.type);
     self.params = parame;

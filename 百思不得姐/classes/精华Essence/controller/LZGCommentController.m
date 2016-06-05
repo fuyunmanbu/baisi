@@ -38,6 +38,8 @@ static NSString * const comm = @"comment";
 @property (nonatomic, assign) NSInteger page;
 /** 管理者 */
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
+//选中的行
+@property(nonatomic,strong)NSIndexPath *indexpath;
 @end
 
 @implementation LZGCommentController
@@ -103,6 +105,12 @@ static NSString * const comm = @"comment";
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
         {
+            //        如果没有数据就返回
+            if (![responseObject isKindOfClass:[NSDictionary class]]) {
+                self.commentTable.mj_footer.hidden = YES;
+                return ;
+            }
+            
         // 最新评论
         NSArray *newComments = [XMGComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         [self.latestComment addObjectsFromArray:newComments];
@@ -124,7 +132,9 @@ static NSString * const comm = @"comment";
             self.commentTable.mj_footer.hidden = YES;
         } else {
             // 结束刷新状态
+            self.commentTable.mj_footer.hidden = NO;
             [self.commentTable.mj_footer endRefreshing];
+            
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [self.commentTable.mj_footer endRefreshing];
@@ -139,6 +149,12 @@ static NSString * const comm = @"comment";
     dict[@"c"] = @"comment";
     dict[@"data_id"] = self.topic.ID;
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        如果没有数据就返回
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            [self.commentTable.mj_header endRefreshing];
+            return ;
+        }
+
         self.hotComment = [XMGComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         self.latestComment = [XMGComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
          [self.commentTable reloadData];
@@ -150,6 +166,8 @@ static NSString * const comm = @"comment";
         NSInteger total = [responseObject[@"total"] integerValue];
         if (self.latestComment.count >= total) { // 全部加载完毕
             self.commentTable.mj_footer.hidden = YES;
+        }else{
+            self.commentTable.mj_footer.hidden = NO;
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.commentTable.mj_header endRefreshing];
@@ -220,9 +238,7 @@ static NSString * const comm = @"comment";
 - (void)itemClick:(UIBarButtonItem *)item{
     
 }
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    [self.view endEditing:YES];
-}
+
 
 #pragma mark - <UITableView>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -235,7 +251,7 @@ static NSString * const comm = @"comment";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSInteger hot = self.hotComment.count;
     NSInteger lat = self.latestComment.count;
-    self.commentTable.mj_footer.hidden = (lat == 0);
+    tableView.mj_footer.hidden = (lat == 0);
     
     if (section == 0) {
         return hot > 0 ? hot : lat;
@@ -287,5 +303,36 @@ static NSString * const comm = @"comment";
 
     cell.comment = [self commentInIndexPath:indexPath];
     return cell;
+}
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self.view endEditing:YES];
+    [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+     LZGCommentCell *cell = (LZGCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
+    self.indexpath = indexPath;
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+    }else {
+        [cell becomeFirstResponder];
+        UIMenuItem *ding = [[UIMenuItem alloc]initWithTitle:@"顶" action:@selector(ding:)];
+        UIMenuItem *replay = [[UIMenuItem alloc]initWithTitle:@"回复" action:@selector(replay:)];
+        UIMenuItem *report = [[UIMenuItem alloc]initWithTitle:@"举报" action:@selector(report:)];
+        menu.menuItems = @[ding,replay,report];
+        [menu setTargetRect:CGRectMake(0, cell.height * 0.5, cell.width, cell.height) inView:cell];
+        [menu setMenuVisible:YES animated:YES];
+    }
+}
+- (void)ding:(UIMenuController *)menu{
+    NSIndexPath *indexPath = [self.commentTable indexPathForSelectedRow];
+    NSLog(@"%@",[self commentInIndexPath:indexPath].content);
+}
+- (void)replay:(UIMenuController *)menu{
+    
+}
+- (void)report:(UIMenuController *)menu{
+    
 }
 @end

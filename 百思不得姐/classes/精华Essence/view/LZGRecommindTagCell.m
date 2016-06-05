@@ -23,7 +23,8 @@
 }
 - (void)setRecommend:(LZGRecommendTag *)recommend{
     _recommend = recommend;
-    [self.image_List sd_setImageWithURL:[NSURL URLWithString:recommend.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.image_List sd_setImageWithURL:[NSURL URLWithString:recommend.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.image_List setHeaderImage:recommend.image_list];
     self.themNameLabel.text = recommend.theme_name;
     
     NSString *subNumber = nil;

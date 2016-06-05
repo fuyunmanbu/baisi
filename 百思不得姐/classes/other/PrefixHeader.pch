@@ -12,6 +12,9 @@
 #import "UIView+XMGExtension.h"
 #import "UIBarButtonItem+LZGNewItem.h"
 #import "NSDate+LZGExtension.h"
+#import "UIImage+XMGExtension.h"
+#import "UIImageView+XMGExtension.h"
+
 
 #ifdef DEBUG
 #define LZGLog(...) NSLog(__VA_ARGS__)

@@ -84,6 +84,7 @@
 - (IBAction)cancel{
     [self cancelWithCompletionBlick:nil];
 }
+
 /**
  *  先执行退出动画，再执行completion“Block”
  */

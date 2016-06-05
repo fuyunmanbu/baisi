@@ -14,6 +14,8 @@
 
 @implementation LZGMeViewController
 
+/** 全局的窗口 */
+//static UIWindow *window_;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +29,7 @@
                                                 btm1
                                                ];
      self.view.backgroundColor = LZGlogRGB;
+    
 }
 
 - (void)tagClick{
