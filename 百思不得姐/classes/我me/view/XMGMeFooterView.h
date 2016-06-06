@@ -1,5 +1,5 @@
 //
-//  UIImageView+XMGExtension.h
+//  XMGMeFooterView.h
 //  01-百思不得姐
 //
 //  Created by xiaomage on 15/8/3.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageView (XMGExtension)
-- (void)setHeaderImage:(NSString *)url;
+@interface XMGMeFooterView : UIView
+@property(nonatomic,copy)void(^myBlock)(NSInteger );
+
 @end

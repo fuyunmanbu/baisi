@@ -84,7 +84,7 @@ static NSString * const comm = @"comment";
     self.commentTable.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
     [self.commentTable.mj_header beginRefreshing];
     
-    self.commentTable.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
+    self.commentTable.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
     self.commentTable.mj_footer.hidden = YES;
 }
 - (void)loadMoreComments{
@@ -110,7 +110,6 @@ static NSString * const comm = @"comment";
                 self.commentTable.mj_footer.hidden = YES;
                 return ;
             }
-            
         // 最新评论
         NSArray *newComments = [XMGComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         [self.latestComment addObjectsFromArray:newComments];
@@ -134,7 +133,6 @@ static NSString * const comm = @"comment";
             // 结束刷新状态
             self.commentTable.mj_footer.hidden = NO;
             [self.commentTable.mj_footer endRefreshing];
-            
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [self.commentTable.mj_footer endRefreshing];
@@ -252,7 +250,6 @@ static NSString * const comm = @"comment";
     NSInteger hot = self.hotComment.count;
     NSInteger lat = self.latestComment.count;
     tableView.mj_footer.hidden = (lat == 0);
-    
     if (section == 0) {
         return hot > 0 ? hot : lat;
     }
@@ -276,11 +273,11 @@ static NSString * const comm = @"comment";
     label.x = XMGTopicCellMargin;
     label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     NSInteger hot = self.hotComment.count;
-        if (section == 0) {
-            label.text = hot > 0 ? @"最热评论" : @"最新评论";
-        }else {
-            label.text = @"最新评论";
-        }
+    if (section == 0) {
+        label.text = hot > 0 ? @"最热评论" : @"最新评论";
+    }else {
+        label.text = @"最新评论";
+    }
     [view addSubview:label];
     return view;
 }
@@ -300,7 +297,6 @@ static NSString * const comm = @"comment";
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     LZGCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:comm];
-
     cell.comment = [self commentInIndexPath:indexPath];
     return cell;
 }
@@ -309,7 +305,6 @@ static NSString * const comm = @"comment";
     [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     UIMenuController *menu = [UIMenuController sharedMenuController];
      LZGCommentCell *cell = (LZGCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
     self.indexpath = indexPath;

@@ -1,5 +1,5 @@
 //
-//  UIImageView+XMGExtension.h
+//  XMGSqaureButton.h
 //  01-百思不得姐
 //
 //  Created by xiaomage on 15/8/3.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface UIImageView (XMGExtension)
-- (void)setHeaderImage:(NSString *)url;
+@class XMGSquare;
+@interface XMGSqaureButton : UIButton
+/** 方块模型 */
+@property (nonatomic, strong) XMGSquare *square;
 @end

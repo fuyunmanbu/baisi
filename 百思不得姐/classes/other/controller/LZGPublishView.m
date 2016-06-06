@@ -45,8 +45,8 @@
         /**
          *  设置frame
          */
-        int row = i / maxCols;
-        int col = i % maxCols;
+        int row = i / maxCols;//行
+        int col = i % maxCols;//列
         CGFloat btnX = maginX + col * (buttonW + TwoMaginX);
         CGFloat btnY = buttonStartY + row * buttonH;
         

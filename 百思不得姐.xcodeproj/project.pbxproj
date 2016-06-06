@@ -10,6 +10,12 @@
 		518A36BEE960C187B420D192 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E967D19FACF864BEE4B386E4 /* libPods.a */; };
 		CE2EE8791D03C9C400402714 /* UIImage+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE8761D03C9C400402714 /* UIImage+XMGExtension.m */; };
 		CE2EE87A1D03C9C400402714 /* UIImageView+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE8781D03C9C400402714 /* UIImageView+XMGExtension.m */; };
+		CE2EE8811D040CD900402714 /* XMGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE87C1D040CD900402714 /* XMGMeCell.m */; };
+		CE2EE8821D040CDA00402714 /* XMGMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE87E1D040CD900402714 /* XMGMeFooterView.m */; };
+		CE2EE8831D040CDA00402714 /* XMGSqaureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE8801D040CD900402714 /* XMGSqaureButton.m */; };
+		CE2EE8861D040CE400402714 /* XMGSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE8851D040CE400402714 /* XMGSquare.m */; };
+		CE2EE88A1D04231200402714 /* XMGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE8881D04231200402714 /* XMGWebViewController.m */; };
+		CE2EE88B1D04231200402714 /* XMGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2EE8891D04231200402714 /* XMGWebViewController.xib */; };
 		CE5028A41CF9A2A3008C1CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5028A31CF9A2A3008C1CD1 /* Assets.xcassets */; };
 		CE50290F1CF9A2EB008C1CD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5028B11CF9A2EB008C1CD1 /* AppDelegate.m */; };
 		CE5029101CF9A2EB008C1CD1 /* NSDate+LZGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5028B41CF9A2EB008C1CD1 /* NSDate+LZGExtension.m */; };
@@ -75,6 +81,17 @@
 		CE2EE8761D03C9C400402714 /* UIImage+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XMGExtension.m"; sourceTree = "<group>"; };
 		CE2EE8771D03C9C400402714 /* UIImageView+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XMGExtension.h"; sourceTree = "<group>"; };
 		CE2EE8781D03C9C400402714 /* UIImageView+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XMGExtension.m"; sourceTree = "<group>"; };
+		CE2EE87B1D040CD900402714 /* XMGMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeCell.h; sourceTree = "<group>"; };
+		CE2EE87C1D040CD900402714 /* XMGMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeCell.m; sourceTree = "<group>"; };
+		CE2EE87D1D040CD900402714 /* XMGMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeFooterView.h; sourceTree = "<group>"; };
+		CE2EE87E1D040CD900402714 /* XMGMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeFooterView.m; sourceTree = "<group>"; };
+		CE2EE87F1D040CD900402714 /* XMGSqaureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqaureButton.h; sourceTree = "<group>"; };
+		CE2EE8801D040CD900402714 /* XMGSqaureButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSqaureButton.m; sourceTree = "<group>"; };
+		CE2EE8841D040CE400402714 /* XMGSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSquare.h; sourceTree = "<group>"; };
+		CE2EE8851D040CE400402714 /* XMGSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSquare.m; sourceTree = "<group>"; };
+		CE2EE8871D04231200402714 /* XMGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWebViewController.h; sourceTree = "<group>"; };
+		CE2EE8881D04231200402714 /* XMGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWebViewController.m; sourceTree = "<group>"; };
+		CE2EE8891D04231200402714 /* XMGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGWebViewController.xib; sourceTree = "<group>"; };
 		CE5028941CF9A2A3008C1CD1 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5028A31CF9A2A3008C1CD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5028A81CF9A2A3008C1CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -375,6 +392,9 @@
 			children = (
 				CE5028E91CF9A2EB008C1CD1 /* LZGMeViewController.h */,
 				CE5028EA1CF9A2EB008C1CD1 /* LZGMeViewController.m */,
+				CE2EE8871D04231200402714 /* XMGWebViewController.h */,
+				CE2EE8881D04231200402714 /* XMGWebViewController.m */,
+				CE2EE8891D04231200402714 /* XMGWebViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -382,6 +402,8 @@
 		CE5028EB1CF9A2EB008C1CD1 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				CE2EE8841D040CE400402714 /* XMGSquare.h */,
+				CE2EE8851D040CE400402714 /* XMGSquare.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -389,6 +411,12 @@
 		CE5028EC1CF9A2EB008C1CD1 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CE2EE87B1D040CD900402714 /* XMGMeCell.h */,
+				CE2EE87C1D040CD900402714 /* XMGMeCell.m */,
+				CE2EE87D1D040CD900402714 /* XMGMeFooterView.h */,
+				CE2EE87E1D040CD900402714 /* XMGMeFooterView.m */,
+				CE2EE87F1D040CD900402714 /* XMGSqaureButton.h */,
+				CE2EE8801D040CD900402714 /* XMGSqaureButton.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -573,6 +601,7 @@
 				CE5029201CF9A2EB008C1CD1 /* LZGFriendTrendsViewController.xib in Resources */,
 				CE5029241CF9A2EB008C1CD1 /* LZGloginRegisterController.xib in Resources */,
 				CE5029381CF9A2EB008C1CD1 /* LZGTopicCell.xib in Resources */,
+				CE2EE88B1D04231200402714 /* XMGWebViewController.xib in Resources */,
 				CEB232891CFAD7D200BE70CB /* LZGVioceView.xib in Resources */,
 				CE50291E1CF9A2EB008C1CD1 /* LZGCommitViewController.xib in Resources */,
 				CE5029361CF9A2EB008C1CD1 /* LZGRecommindTagCell.xib in Resources */,
@@ -644,10 +673,13 @@
 				CE5029191CF9A2EB008C1CD1 /* main.m in Sources */,
 				CE5029331CF9A2EB008C1CD1 /* XMGTopic.m in Sources */,
 				CE50291A1CF9A2EB008C1CD1 /* LZGPushGuideView.m in Sources */,
+				CE2EE8821D040CDA00402714 /* XMGMeFooterView.m in Sources */,
+				CE2EE8861D040CE400402714 /* XMGSquare.m in Sources */,
 				CE50291C1CF9A2EB008C1CD1 /* XMGTabBar.m in Sources */,
 				CE2EE87A1D03C9C400402714 /* UIImageView+XMGExtension.m in Sources */,
 				CE5029221CF9A2EB008C1CD1 /* LZGRecommendUser.m in Sources */,
 				CE50291D1CF9A2EB008C1CD1 /* LZGCommitViewController.m in Sources */,
+				CE2EE8831D040CDA00402714 /* XMGSqaureButton.m in Sources */,
 				CEABFFEE1CFBF7EA0043BB64 /* LZGCommentController.m in Sources */,
 				CE89F2401D01403D000C9B5F /* XMGTopWindow.m in Sources */,
 				CEB4E3B91CFB2D2500B70ABD /* XMGUser.m in Sources */,
@@ -662,6 +694,7 @@
 				CE5029131CF9A2EB008C1CD1 /* LZGNavigationController.m in Sources */,
 				CE5029291CF9A2EB008C1CD1 /* XMGRecommendCategoryCell.m in Sources */,
 				CE5029161CF9A2EB008C1CD1 /* LZGTabBarController.m in Sources */,
+				CE2EE8811D040CD900402714 /* XMGMeCell.m in Sources */,
 				CEB4E3B21CFAE73700B70ABD /* LZGVedioView.m in Sources */,
 				CEB232871CFAD7B000BE70CB /* LZGVioceView.m in Sources */,
 				CE50292D1CF9A2EB008C1CD1 /* LZGAllViewController.m in Sources */,
@@ -671,6 +704,7 @@
 				CE5029371CF9A2EB008C1CD1 /* LZGTopicCell.m in Sources */,
 				CE5029391CF9A2EB008C1CD1 /* LZGTopicPictureView.m in Sources */,
 				CE50292F1CF9A2EB008C1CD1 /* LZGPictureViewController.m in Sources */,
+				CE2EE88A1D04231200402714 /* XMGWebViewController.m in Sources */,
 				CE5029101CF9A2EB008C1CD1 /* NSDate+LZGExtension.m in Sources */,
 				CE5029181CF9A2EB008C1CD1 /* Foundation+Log.m in Sources */,
 				CE50292B1CF9A2EB008C1CD1 /* LZGMeViewController.m in Sources */,
