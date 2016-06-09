@@ -42,26 +42,24 @@
 @end
 
 @implementation LZGTopicCell
-+ (instancetype)cellLoad{
-    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
-}
+
 - (LZGVioceView *)voice{
     if (_voice == nil) {
-        _voice = [LZGVioceView voiceView];
+        _voice = [LZGVioceView viewFromXib];
         [self.contentView addSubview:_voice];
     }
     return _voice;
 }
 - (LZGVedioView *)vedio{
     if (_vedio == nil) {
-        _vedio = [LZGVedioView vedioView];
+        _vedio = [LZGVedioView viewFromXib];
         [self.contentView addSubview:_vedio];
     }
     return _vedio;
 }
 - (LZGTopicPictureView *)pictureView{
     if (_pictureView == nil) {
-        _pictureView = [LZGTopicPictureView pictureView];
+        _pictureView = [LZGTopicPictureView viewFromXib];
         [self.contentView addSubview:_pictureView];
     }
     return _pictureView;

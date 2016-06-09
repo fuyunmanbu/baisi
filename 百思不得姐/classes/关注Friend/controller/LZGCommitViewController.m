@@ -166,12 +166,14 @@ static NSString *const rightID = @"cell";
     }else{
         LZGRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:rightID];
         LZGRecommendCategory *c = LZGSelectedCategory;
-        cell.user = c.users[indexPath.row];
+        if (c.users.count) {
+            cell.user = c.users[indexPath.row];
+        }
         return cell;
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([tableView isKindOfClass:[self.tableViewRight class]]) {
+    if (tableView == self.tableViewLeft) {
         //    结束刷新
         [self.tableViewRight.mj_header endRefreshing];
         [self.tableViewRight.mj_footer endRefreshing];

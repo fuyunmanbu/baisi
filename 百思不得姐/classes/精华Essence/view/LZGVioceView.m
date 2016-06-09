@@ -17,9 +17,7 @@
 
 @end
 @implementation LZGVioceView
-+ (instancetype)voiceView{
-    return [[[NSBundle mainBundle]loadNibNamed:@"LZGVioceView" owner:nil options:nil]lastObject];
-}
+
 - (void)awakeFromNib{
     self.autoresizingMask = UIViewAutoresizingNone;
     self.backImage.userInteractionEnabled = YES;

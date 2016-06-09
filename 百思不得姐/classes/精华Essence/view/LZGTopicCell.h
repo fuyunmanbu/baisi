@@ -10,5 +10,5 @@
 @class XMGTopic;
 @interface LZGTopicCell : UITableViewCell
 @property(nonatomic,strong)XMGTopic *topic;
-+ (instancetype)cellLoad;
+
 @end

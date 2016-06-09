@@ -10,5 +10,5 @@
 @class XMGTopic;
 @interface LZGVedioView : UIView
 @property(nonatomic,strong)XMGTopic *vedio;
-+ (instancetype)vedioView;
+
 @end

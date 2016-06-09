@@ -146,15 +146,19 @@ static NSString * const comm = @"comment";
     dict[@"a"] = @"dataList";
     dict[@"c"] = @"comment";
     dict[@"data_id"] = self.topic.ID;
+    dict[@"hot"] = @"1";
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        如果没有数据就返回
         if (![responseObject isKindOfClass:[NSDictionary class]]) {
             [self.commentTable.mj_header endRefreshing];
             return ;
         }
-
+//        self.hotComment = [XMGComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
+        
         self.hotComment = [XMGComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         self.latestComment = [XMGComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        
+        NSLog(@"%ld %ld",self.hotComment.count,self.latestComment.count);
          [self.commentTable reloadData];
         [self.commentTable.mj_header endRefreshing];
         
@@ -175,7 +179,7 @@ static NSString * const comm = @"comment";
     
     UIView *header = [[UIView alloc]init];
     header.backgroundColor = LZGlogRGB;
-    LZGTopicCell *cel = [LZGTopicCell cellLoad];
+    LZGTopicCell *cel = [LZGTopicCell viewFromXib];
     cel.topic = self.topic;
 //    cel.height = self.topic.cellHeight;
 //    cel.width = LZGScreenW;
@@ -242,6 +246,7 @@ static NSString * const comm = @"comment";
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     NSInteger hot = self.hotComment.count;
     NSInteger lat = self.latestComment.count;
+
     if (hot) return 2;
     if (lat) return 1;
     return 0;

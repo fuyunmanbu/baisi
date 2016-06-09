@@ -9,9 +9,7 @@
 #import "LZGPushGuideView.h"
 
 @implementation LZGPushGuideView
-+ (instancetype)loadView{
-    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
-}
+
 + (void)show
 {
     NSString *key = @"CFBundleShortVersionString";
@@ -24,7 +22,7 @@
     if (![currentVersion isEqualToString:sanboxVersion]) {
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
         
-        LZGPushGuideView *guideView = [LZGPushGuideView loadView];
+        LZGPushGuideView *guideView = [LZGPushGuideView viewFromXib];
         guideView.frame = window.bounds;
         [window addSubview:guideView];
         

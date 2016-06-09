@@ -29,7 +29,7 @@
     return self;
 }
 - (void)pushAnimantion{
-    LZGPublishView *pub = [LZGPublishView loadView];
+    LZGPublishView *pub = [LZGPublishView viewFromXib];
     UIWindow *vc = [UIApplication sharedApplication].keyWindow;
     pub.frame = vc.bounds;
     [vc addSubview:pub];

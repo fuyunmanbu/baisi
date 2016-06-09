@@ -17,9 +17,7 @@
 
 @end
 @implementation LZGVedioView
-+ (instancetype)vedioView{
-    return [[[NSBundle mainBundle]loadNibNamed:@"LZGVedioView" owner:nil options:nil]lastObject];
-}
+
 - (void)awakeFromNib{
     self.autoresizingMask = UIViewAutoresizingNone;
     self.VediobackImage.userInteractionEnabled = YES;

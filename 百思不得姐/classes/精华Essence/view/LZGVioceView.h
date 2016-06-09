@@ -10,5 +10,5 @@
 @class XMGTopic;
 @interface LZGVioceView : UIView
 @property(nonatomic,strong)XMGTopic *voice;
-+ (instancetype)voiceView;
+
 @end

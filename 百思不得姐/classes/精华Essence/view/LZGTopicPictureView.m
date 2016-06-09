@@ -42,9 +42,7 @@
     picture.topic = self.topic;
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:picture animated:YES completion:nil];
 }
-+ (instancetype)pictureView{
-    return [[[NSBundle mainBundle]loadNibNamed:@"LZGTopicPictureView" owner:nil options:nil]lastObject];
-}
+
 - (void)setTopic:(XMGTopic *)topic{
     _topic = topic;
     // 立马显示最新的进度值(防止因为网速慢, 导致显示的是其他图片的下载进度)

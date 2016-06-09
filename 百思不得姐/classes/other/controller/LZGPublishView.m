@@ -9,12 +9,10 @@
 #import "LZGPublishView.h"
 #import "LZGVerticaButton.h"
 #import <POP.h>
-
+#import "XMGPostWordViewController.h"
 
 @implementation LZGPublishView
-+ (instancetype)loadView{
-    return [[[NSBundle mainBundle]loadNibNamed:@"LZGPublishView" owner:nil options:nil]lastObject] ;
-}
+
 
 - (void)awakeFromNib{
   
@@ -42,6 +40,7 @@
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn setTitle:titles[i] forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:14];
+        btn.tag = i;
         /**
          *  设置frame
          */
@@ -120,8 +119,11 @@
  */
 - (void)btnClick:(UIButton *)btn{
     [self cancelWithCompletionBlick:^{
-        if (btn.tag == 0) {
-            NSLog(@"加载视图");
+        if (btn.tag == 2) {
+            XMGPostWordViewController *post = [[XMGPostWordViewController alloc]init];
+            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:post];
+            UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+            [vc presentViewController:nav animated:YES completion:nil];
         }
     }];
 }

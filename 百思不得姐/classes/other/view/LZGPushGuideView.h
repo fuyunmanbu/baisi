@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LZGPushGuideView : UIView
-+ (instancetype)loadView;
+
 + (void)show;
 @end

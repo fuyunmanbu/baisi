@@ -10,5 +10,5 @@
 @class XMGTopic;
 @interface LZGTopicPictureView : UIView
 @property(nonatomic,strong)XMGTopic *topic;
-+ (instancetype)pictureView;
+
 @end
