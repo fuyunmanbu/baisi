@@ -77,6 +77,7 @@
 		CEEDE6BE1D09588600444000 /* XMGAddTagToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B81D09588600444000 /* XMGAddTagToolbar.m */; };
 		CEEDE6BF1D09588600444000 /* XMGAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEDE6B91D09588600444000 /* XMGAddTagToolbar.xib */; };
 		CEEDE6C01D09588600444000 /* XMGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6BB1D09588600444000 /* XMGPlaceholderTextView.m */; };
+		CEEDE6C31D097EF200444000 /* XMGTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6C21D097EF200444000 /* XMGTagButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -203,6 +204,8 @@
 		CEEDE6B91D09588600444000 /* XMGAddTagToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGAddTagToolbar.xib; sourceTree = "<group>"; };
 		CEEDE6BA1D09588600444000 /* XMGPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPlaceholderTextView.h; sourceTree = "<group>"; };
 		CEEDE6BB1D09588600444000 /* XMGPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPlaceholderTextView.m; sourceTree = "<group>"; };
+		CEEDE6C11D097EF200444000 /* XMGTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTagButton.h; sourceTree = "<group>"; };
+		CEEDE6C21D097EF200444000 /* XMGTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTagButton.m; sourceTree = "<group>"; };
 		E967D19FACF864BEE4B386E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -553,9 +556,6 @@
 				CEEDE6B31D09588600444000 /* XMGAddTagViewController.m */,
 				CEEDE6B41D09588600444000 /* XMGPostWordViewController.h */,
 				CEEDE6B51D09588600444000 /* XMGPostWordViewController.m */,
-				CE5028BC1CF9A2EB008C1CD1 /* LZGPublishView.h */,
-				CE5028BD1CF9A2EB008C1CD1 /* LZGPublishView.m */,
-				CE5028BE1CF9A2EB008C1CD1 /* LZGPublishView.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -563,11 +563,16 @@
 		CEEDE6B61D09588600444000 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE5028BC1CF9A2EB008C1CD1 /* LZGPublishView.h */,
+				CE5028BD1CF9A2EB008C1CD1 /* LZGPublishView.m */,
+				CE5028BE1CF9A2EB008C1CD1 /* LZGPublishView.xib */,
 				CEEDE6B71D09588600444000 /* XMGAddTagToolbar.h */,
 				CEEDE6B81D09588600444000 /* XMGAddTagToolbar.m */,
 				CEEDE6B91D09588600444000 /* XMGAddTagToolbar.xib */,
 				CEEDE6BA1D09588600444000 /* XMGPlaceholderTextView.h */,
 				CEEDE6BB1D09588600444000 /* XMGPlaceholderTextView.m */,
+				CEEDE6C11D097EF200444000 /* XMGTagButton.h */,
+				CEEDE6C21D097EF200444000 /* XMGTagButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -746,6 +751,7 @@
 				CE5029291CF9A2EB008C1CD1 /* XMGRecommendCategoryCell.m in Sources */,
 				CE5029161CF9A2EB008C1CD1 /* LZGTabBarController.m in Sources */,
 				CE2EE8811D040CD900402714 /* XMGMeCell.m in Sources */,
+				CEEDE6C31D097EF200444000 /* XMGTagButton.m in Sources */,
 				CEB4E3B21CFAE73700B70ABD /* LZGVedioView.m in Sources */,
 				CEB232871CFAD7B000BE70CB /* LZGVioceView.m in Sources */,
 				CE50292D1CF9A2EB008C1CD1 /* LZGAllViewController.m in Sources */,
