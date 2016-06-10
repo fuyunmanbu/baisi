@@ -69,8 +69,12 @@
     [self addSubview:sloganView];
     
     POPSpringAnimation *anim1 = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
-    anim1.fromValue = [NSValue valueWithCGPoint:CGPointMake(LZGScreenW * 0.5, 0)];
-    anim1.toValue = [NSValue valueWithCGPoint:CGPointMake(LZGScreenW * 0.5, LZGScreenH * 0.2)];
+    CGFloat centerX = LZGScreenW * 0.5;
+    CGFloat centerEndY = LZGScreenH * 0.2;
+    CGFloat centerBeginY = centerEndY - centerX;
+    sloganView.centerY = centerBeginY;
+    anim1.fromValue = [NSValue valueWithCGPoint:CGPointMake(centerX, 0)];
+    anim1.toValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerEndY)];
     anim1.springSpeed = 10;
     anim1.springBounciness = 10;
     anim1.beginTime = CACurrentMediaTime() + 0.05 * images.count;
@@ -88,7 +92,7 @@
  *  先执行退出动画，再执行completion“Block”
  */
 - (void)cancelWithCompletionBlick:(void(^)())completion{
-      [UIApplication sharedApplication].keyWindow.rootViewController.view.userInteractionEnabled = NO;
+    [UIApplication sharedApplication].keyWindow.rootViewController.view.userInteractionEnabled = NO;
     self.userInteractionEnabled = NO;
     for (int i = 2; i < self.subviews.count; i ++) {
         UIView *subView = self.subviews[i];

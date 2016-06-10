@@ -78,6 +78,7 @@
 		CEEDE6BF1D09588600444000 /* XMGAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEDE6B91D09588600444000 /* XMGAddTagToolbar.xib */; };
 		CEEDE6C01D09588600444000 /* XMGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6BB1D09588600444000 /* XMGPlaceholderTextView.m */; };
 		CEEDE6C31D097EF200444000 /* XMGTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6C21D097EF200444000 /* XMGTagButton.m */; };
+		CEEDE6C61D0997FE00444000 /* XMGTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6C51D0997FE00444000 /* XMGTagTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +207,8 @@
 		CEEDE6BB1D09588600444000 /* XMGPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPlaceholderTextView.m; sourceTree = "<group>"; };
 		CEEDE6C11D097EF200444000 /* XMGTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTagButton.h; sourceTree = "<group>"; };
 		CEEDE6C21D097EF200444000 /* XMGTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTagButton.m; sourceTree = "<group>"; };
+		CEEDE6C41D0997FE00444000 /* XMGTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTagTextField.h; sourceTree = "<group>"; };
+		CEEDE6C51D0997FE00444000 /* XMGTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTagTextField.m; sourceTree = "<group>"; };
 		E967D19FACF864BEE4B386E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -573,6 +576,8 @@
 				CEEDE6BB1D09588600444000 /* XMGPlaceholderTextView.m */,
 				CEEDE6C11D097EF200444000 /* XMGTagButton.h */,
 				CEEDE6C21D097EF200444000 /* XMGTagButton.m */,
+				CEEDE6C41D0997FE00444000 /* XMGTagTextField.h */,
+				CEEDE6C51D0997FE00444000 /* XMGTagTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -763,6 +768,7 @@
 				CE50292F1CF9A2EB008C1CD1 /* LZGPictureViewController.m in Sources */,
 				CE2EE88A1D04231200402714 /* XMGWebViewController.m in Sources */,
 				CEEDE6BC1D09588600444000 /* XMGAddTagViewController.m in Sources */,
+				CEEDE6C61D0997FE00444000 /* XMGTagTextField.m in Sources */,
 				CE5029101CF9A2EB008C1CD1 /* NSDate+LZGExtension.m in Sources */,
 				CE5029181CF9A2EB008C1CD1 /* Foundation+Log.m in Sources */,
 				CE50292B1CF9A2EB008C1CD1 /* LZGMeViewController.m in Sources */,

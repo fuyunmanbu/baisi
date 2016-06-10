@@ -49,7 +49,7 @@ static NSString *const rightID = @"cell";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.tableViewRight.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     self.tableViewLeft.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
-    
+   
     self.tableViewRight.rowHeight = 70;
     self.title = @"推荐关注";
     [SVProgressHUD show];
