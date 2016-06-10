@@ -9,7 +9,7 @@
 #import "LZGMeViewController.h"
 #import "XMGMeCell.h"
 #import "XMGMeFooterView.h"
-
+#import "XMGSettingViewController.h"
 @interface LZGMeViewController ()
 
 @property(nonatomic,assign)NSInteger index;
@@ -52,10 +52,11 @@ static NSString *XMGMeId = @"me";
 
 
 - (void)tagClick{
-    LZGLogFunc;
+    XMGSettingViewController *setting = [[XMGSettingViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    [self.navigationController pushViewController:setting animated:YES];
 }
 - (void)tagClick1{
-    LZGLogFunc;
+    
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;

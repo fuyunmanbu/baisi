@@ -16,6 +16,7 @@
 		CE2EE8861D040CE400402714 /* XMGSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE8851D040CE400402714 /* XMGSquare.m */; };
 		CE2EE88A1D04231200402714 /* XMGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE8881D04231200402714 /* XMGWebViewController.m */; };
 		CE2EE88B1D04231200402714 /* XMGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2EE8891D04231200402714 /* XMGWebViewController.xib */; };
+		CE3D239C1D0A7B89003336D3 /* XMGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3D239B1D0A7B89003336D3 /* XMGSettingViewController.m */; };
 		CE5028A41CF9A2A3008C1CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5028A31CF9A2A3008C1CD1 /* Assets.xcassets */; };
 		CE50290F1CF9A2EB008C1CD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5028B11CF9A2EB008C1CD1 /* AppDelegate.m */; };
 		CE5029101CF9A2EB008C1CD1 /* NSDate+LZGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5028B41CF9A2EB008C1CD1 /* NSDate+LZGExtension.m */; };
@@ -99,6 +100,8 @@
 		CE2EE8871D04231200402714 /* XMGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWebViewController.h; sourceTree = "<group>"; };
 		CE2EE8881D04231200402714 /* XMGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWebViewController.m; sourceTree = "<group>"; };
 		CE2EE8891D04231200402714 /* XMGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGWebViewController.xib; sourceTree = "<group>"; };
+		CE3D239A1D0A7B89003336D3 /* XMGSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSettingViewController.h; sourceTree = "<group>"; };
+		CE3D239B1D0A7B89003336D3 /* XMGSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSettingViewController.m; sourceTree = "<group>"; };
 		CE5028941CF9A2A3008C1CD1 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5028A31CF9A2A3008C1CD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5028A81CF9A2A3008C1CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -413,6 +416,8 @@
 				CE2EE8871D04231200402714 /* XMGWebViewController.h */,
 				CE2EE8881D04231200402714 /* XMGWebViewController.m */,
 				CE2EE8891D04231200402714 /* XMGWebViewController.xib */,
+				CE3D239A1D0A7B89003336D3 /* XMGSettingViewController.h */,
+				CE3D239B1D0A7B89003336D3 /* XMGSettingViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -737,6 +742,7 @@
 				CEEDE6C01D09588600444000 /* XMGPlaceholderTextView.m in Sources */,
 				CE2EE87A1D03C9C400402714 /* UIImageView+XMGExtension.m in Sources */,
 				CE5029221CF9A2EB008C1CD1 /* LZGRecommendUser.m in Sources */,
+				CE3D239C1D0A7B89003336D3 /* XMGSettingViewController.m in Sources */,
 				CE50291D1CF9A2EB008C1CD1 /* LZGCommitViewController.m in Sources */,
 				CE2EE8831D040CDA00402714 /* XMGSqaureButton.m in Sources */,
 				CEABFFEE1CFBF7EA0043BB64 /* LZGCommentController.m in Sources */,

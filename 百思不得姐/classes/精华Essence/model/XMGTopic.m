@@ -70,6 +70,9 @@
             // cell的高度
             _cellHeight = XMGTopicCellTextY + textH + XMGTopicCellBottomBarH +  XMGTopicCellMargin;
             if (self.type == AllTypePicture) {
+                if (self.width != 0 && self.height != 0) {
+                    
+                
                 /**
                  * 图片显示的最大宽度
                  */
@@ -93,6 +96,7 @@
                 _pictureView = CGRectMake(pictureX, pictureY, imageW, imageH);
                 
                 _cellHeight += imageH;
+                    }
             }else if (self.type == AllTypeVoice){
                 CGFloat voiceX = XMGTopicCellMargin;
                 CGFloat voiceY = XMGTopicCellTextY + textH + XMGTopicCellMargin;
