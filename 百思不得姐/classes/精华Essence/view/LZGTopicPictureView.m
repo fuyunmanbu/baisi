@@ -47,7 +47,6 @@
     _topic = topic;
     // 立马显示最新的进度值(防止因为网速慢, 导致显示的是其他图片的下载进度)
     [self.lableProgress setProgress:topic.pictureProgress animated:NO];
-    
     /**
      *  设置图片
      */

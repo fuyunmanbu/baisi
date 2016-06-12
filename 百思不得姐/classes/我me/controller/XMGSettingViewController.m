@@ -22,49 +22,49 @@
     self.tableView.backgroundColor = LZGlogRGB;
 }
 
-- (void)getSize2
-{
+//- (void)getSize2
+//{
     // 图片缓存
-    NSUInteger size = [SDImageCache sharedImageCache].getSize;
+//    NSUInteger size = [SDImageCache sharedImageCache].getSize;
     //    XMGLog(@"%zd %@", size, NSTemporaryDirectory());
     
-    NSFileManager *manager = [NSFileManager defaultManager];
-    // 文件夹
-    NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *cachePath = [caches stringByAppendingPathComponent:@"default/com.hackemist.SDWebImageCache.default"];
+//    NSFileManager *manager = [NSFileManager defaultManager];
+//    // 文件夹
+//    NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+//    NSString *cachePath = [caches stringByAppendingPathComponent:@"default/com.hackemist.SDWebImageCache.default"];
 
     
     // 获得文件夹内部的所有内容名称，不包括内部文件夹
     //    NSArray *contents = [manager contentsOfDirectoryAtPath:cachePath error:nil];
     // 获得文件夹内部的所有内容名称，包括内部文件夹
-    NSArray *subpaths = [manager subpathsAtPath:cachePath];
-    LZGLog(@"%@", subpaths);
-}
-
-- (void)getSize
-{
-    NSFileManager *manager = [NSFileManager defaultManager];
-    
-    NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *cachePath = [caches stringByAppendingPathComponent:@"default/com.hackemist.SDWebImageCache.default"];
-    
-    NSDirectoryEnumerator *fileEnumerator = [manager enumeratorAtPath:cachePath];
-    NSInteger totalSize = 0;
-    for (NSString *fileName in fileEnumerator) {
-//        fileName是文件名
-        NSString *filepath = [cachePath stringByAppendingPathComponent:fileName];
-        
-//        BOOL dir = NO;
-// 判断文件的类型：文件\文件夹
-//        [manager fileExistsAtPath:filepath isDirectory:&dir];
-//        if (dir) continue;
-        NSDictionary *attrs = [manager attributesOfItemAtPath:filepath error:nil];
-        if ([attrs[NSFileType] isEqualToString:NSFileTypeDirectory]) continue;
-        
-        totalSize += [attrs[NSFileSize] integerValue];
-    }
-    LZGLog(@"%zd", totalSize);
-}
+//    NSArray *subpaths = [manager subpathsAtPath:cachePath];
+//    LZGLog(@"%@", subpaths);
+//}
+//
+//- (void)getSize
+//{
+//    NSFileManager *manager = [NSFileManager defaultManager];
+//    
+//    NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+//    NSString *cachePath = [caches stringByAppendingPathComponent:@"default/com.hackemist.SDWebImageCache.default"];
+//    
+//    NSDirectoryEnumerator *fileEnumerator = [manager enumeratorAtPath:cachePath];
+//    NSInteger totalSize = 0;
+//    for (NSString *fileName in fileEnumerator) {
+////        fileName是文件名
+//        NSString *filepath = [cachePath stringByAppendingPathComponent:fileName];
+//        
+////        BOOL dir = NO;
+//// 判断文件的类型：文件\文件夹
+////        [manager fileExistsAtPath:filepath isDirectory:&dir];
+////        if (dir) continue;
+//        NSDictionary *attrs = [manager attributesOfItemAtPath:filepath error:nil];
+//        if ([attrs[NSFileType] isEqualToString:NSFileTypeDirectory]) continue;
+//        
+//        totalSize += [attrs[NSFileSize] integerValue];
+//    }
+//    LZGLog(@"%zd", totalSize);
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

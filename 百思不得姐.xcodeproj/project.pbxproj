@@ -258,8 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				CE5028AE1CF9A2EB008C1CD1 /* classes */,
-				CE5028A31CF9A2A3008C1CD1 /* Assets.xcassets */,
-				CE5028A81CF9A2A3008C1CD1 /* Info.plist */,
 				CE5028971CF9A2A3008C1CD1 /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -268,6 +266,8 @@
 		CE5028971CF9A2A3008C1CD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE5028A81CF9A2A3008C1CD1 /* Info.plist */,
+				CE5028A31CF9A2A3008C1CD1 /* Assets.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,8 +288,6 @@
 		CE5028AF1CF9A2EB008C1CD1 /* other */ = {
 			isa = PBXGroup;
 			children = (
-				CE5028B01CF9A2EB008C1CD1 /* AppDelegate.h */,
-				CE5028B11CF9A2EB008C1CD1 /* AppDelegate.m */,
 				CE5028B21CF9A2EB008C1CD1 /* category */,
 				CE5028B91CF9A2EB008C1CD1 /* controller */,
 				CE5028C61CF9A2EB008C1CD1 /* view */,
@@ -298,6 +296,8 @@
 				CE5028C51CF9A2EB008C1CD1 /* PrefixHeader.pch */,
 				CE89F23E1D01403D000C9B5F /* XMGTopWindow.h */,
 				CE89F23F1D01403D000C9B5F /* XMGTopWindow.m */,
+				CE5028B01CF9A2EB008C1CD1 /* AppDelegate.h */,
+				CE5028B11CF9A2EB008C1CD1 /* AppDelegate.m */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -882,7 +882,7 @@
 				GCC_PREFIX_HEADER = "百思不得姐/classes/other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lzg.-----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lzg.baisi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -897,7 +897,7 @@
 				GCC_PREFIX_HEADER = "百思不得姐/classes/other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lzg.-----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lzg.baisi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
